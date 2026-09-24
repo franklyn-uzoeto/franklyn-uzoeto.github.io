@@ -63,9 +63,9 @@ ul{padding:0;list-style:none}
 .btn-primary{background:var(--gold);color:var(--gold-ink)}
 .btn-primary:hover{background:#dcb56d}
 .meta{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:30px;font:400 .8rem var(--f-mono);color:var(--muted)}
-.portrait{position:relative;justify-self:end;width:100%;max-width:340px}
+.portrait{position:relative;justify-self:end;width:100%;max-width:clamp(240px,27vw,340px)}
 .portrait::before{content:"";position:absolute;inset:14px -12px -14px 12px;border:1px solid var(--gold);border-radius:6px;opacity:.45}
-.portrait img{position:relative;display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:6px;background:var(--panel)}
+.portrait img{position:relative;display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 20%;border-radius:6px;background:var(--panel)}
 
 /* proof */
 .proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-block:1px solid var(--line)}
@@ -121,7 +121,10 @@ ul{padding:0;list-style:none}
 
 @media (max-width:860px){
   .hero{grid-template-columns:minmax(0,1fr)}
-  .portrait{order:-1;justify-self:start;max-width:210px}
+  .hero{gap:22px}
+  .portrait{order:-1;justify-self:start;width:clamp(112px,30vw,160px);max-width:none}
+  .portrait::before{display:none}
+  .portrait img{aspect-ratio:1/1;border-radius:50%;object-position:50% 16%;border:2px solid var(--gold)}
   .case{grid-template-columns:minmax(0,1fr)}
   .contact{grid-template-columns:minmax(0,1fr)}
 }

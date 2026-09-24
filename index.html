@@ -202,7 +202,7 @@ ul{padding:0;list-style:none}
         <div class="case-body">
           <div><h4>The problem</h4><p>Overdue tasks were chased by hand. In one snapshot, 369 tasks across 17 owners were overdue, and a single owner held 143 of them.</p></div>
           <div><h4>What I built</h4><p>A Python job on a GitHub Actions schedule that reads SmartSuite and emails task owners through the Gmail API. It sends three kinds of message: an alert when a task first goes overdue, a Monday and Friday digest, and a Saturday check that end-of-week reports are in. When people reply, a reconcile step updates a status field on the task.</p></div>
-          <div><h4>Result</h4><p>Follow-up runs unattended on a schedule. It was paused during a SmartSuite clean-up and switched back on once the data was ready.</p></div>
+          <div><h4>Result</h4><p>Follow-up runs unattended on a schedule: 63 scheduled runs since early August 2026, 54 of them completed successfully. It was paused during a SmartSuite clean-up and switched back on once the data was ready.</p></div>
         </div>
       </article>
 
@@ -216,7 +216,7 @@ ul{padding:0;list-style:none}
         <div class="case-body">
           <div><h4>The problem</h4><p>The meeting-recording library held duplicate recordings and titles that told you nothing about the meeting.</p></div>
           <div><h4>What I built</h4><p>A tool that finds duplicates (same title, start times within five minutes), keeps the longest copy and proposes the rest for deletion. Nothing is deleted until a person approves it through a GitHub issue. Claude, run headless in the pipeline, renames meetings to a consistent "Topic Meeting with Participant" format. The job runs every 30 minutes.</p></div>
-          <div><h4>Result</h4><p>A library that keeps itself clean on a schedule, with deletion always behind a human decision.</p></div>
+          <div><h4>Result</h4><p>A library that keeps itself clean on a schedule, with deletion always behind a human decision. Since mid-July 2026 it has made 956 scheduled runs, 886 of them successful, and it tracks 177 meetings.</p></div>
         </div>
       </article>
 
